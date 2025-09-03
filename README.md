@@ -7,9 +7,9 @@ Visit my CV at: [https://befrvnk.github.io/cv](https://befrvnk.github.io/cv)
 
 ## 🛠️ Technologies Used
 - HTML5
-- Tailwind CSS
-- Boxicons for icons
-- Inter font from Google Fonts
+- [Tailwind CSS](https://tailwindcss.com)
+- [Boxicons](https://boxicons.com) for icons
+- [Inter](https://rsms.me/inter/) font from Google Fonts
 
 ## 📱 Features
 - Responsive design
@@ -24,3 +24,6 @@ Visit my CV at: [https://befrvnk.github.io/cv](https://befrvnk.github.io/cv)
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgements
+* [BartoszJarocki/cv](https://github.com/BartoszJarocki/cv) for the design inspiration
