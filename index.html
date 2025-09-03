@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frank Hermann - CV</title>
     <meta name="description" content="Professional CV of Frank Hermann">
+
+    <title>Frank Hermann - CV</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,11 +34,11 @@
                LAYOUT COMPONENTS
                =================== */
             .cv-container {
-                @apply bg-white text-gray-800 max-w-3xl mx-auto font-sans py-4 px-4;
+                @apply bg-white text-gray-800 max-w-3xl mx-auto font-sans pt-4 pb-8 px-4;
             }
 
             .cv-header {
-                @apply flex items-center justify-between;
+                @apply flex items-start justify-between;
             }
 
             .cv-header-content {
@@ -56,7 +57,7 @@
                TYPOGRAPHY
                =================== */
             .cv-name {
-                @apply text-2xl font-bold text-gray-900;
+                @apply text-2xl leading-[1.5rem] font-bold text-gray-900;
             }
 
             .cv-tagline {
@@ -123,11 +124,11 @@
             }
 
             .experience-header {
-                @apply flex flex-row justify-between;
+                @apply flex flex-row justify-between items-center;
             }
 
             .date-range {
-                @apply text-sm text-gray-500 tabular-nums;
+                @apply text-sm text-gray-500 tabular-nums whitespace-nowrap;
             }
 
             .job-description {
@@ -146,7 +147,7 @@
             }
 
             .education-header {
-                @apply flex flex-row justify-between;
+                @apply flex flex-row justify-between items-center;
             }
 
             .education-degree {
