@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank Hermann - CV</title>
+    <meta name="description" content="Professional CV of Frank Hermann">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+              },
+            }
+          }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            /* ===================
+               LAYOUT COMPONENTS
+               =================== */
+            .cv-container {
+                @apply bg-white text-gray-800 max-w-3xl mx-auto font-sans my-16;
+            }
+
+            .cv-header {
+                @apply flex items-center justify-between;
+            }
+
+            .cv-header-content {
+                @apply flex-1;
+            }
+
+            .cv-photo {
+                @apply size-28 rounded-xl;
+            }
+
+            .section {
+                @apply mt-8;
+            }
+
+            /* ===================
+               TYPOGRAPHY
+               =================== */
+            .cv-name {
+                @apply text-2xl font-bold text-gray-900;
+            }
+
+            .cv-tagline {
+                @apply mt-2 pe-40 font-mono text-sm text-gray-600;
+            }
+
+            .section-title {
+                @apply text-xl font-bold text-gray-900;
+            }
+
+            .company-name {
+                @apply text-lg font-semibold text-gray-900;
+            }
+
+            .job-title {
+                @apply text-base font-mono font-semibold text-gray-900;
+            }
+
+            .body-text {
+                @apply font-mono text-sm text-gray-600;
+            }
+
+            /* ===================
+               CONTACT & SOCIAL
+               =================== */
+            .contact-info {
+                @apply mt-2;
+            }
+
+            .contact-info-item {
+                @apply flex flex-row items-center print:mt-2;
+            }
+
+            .contact-info-item-text {
+                @apply ms-1 text-sm print:text-xs;
+            }
+
+            .social-container {
+                @apply flex gap-x-2 gap-y-2 mt-2 print:flex-col;
+            }
+
+            .social {
+                @apply inline-flex items-center justify-center rounded-lg border p-1 w-10 h-10 hover:bg-gray-100
+                print:justify-start print:w-auto print:h-auto print:border-0 print:p-0 print:hover:bg-transparent;
+            }
+
+            .social-url {
+                @apply hidden ms-1 text-xs font-mono print:inline;
+            }
+
+            /* ===================
+               ABOUT SECTION
+               =================== */
+
+            .about-text {
+                @apply mt-4 font-mono text-sm text-gray-600;
+            }
+
+            /* ===================
+               EXPERIENCE SECTION
+               =================== */
+            .experience-item {
+                @apply mt-8;
+            }
+
+            .experience-header {
+                @apply flex flex-row justify-between;
+            }
+
+            .date-range {
+                @apply text-sm text-gray-500 tabular-nums;
+            }
+
+            .job-description {
+                @apply mt-2 text-xs font-mono;
+            }
+
+            .achievement-list {
+                @apply mt-4 list-disc list-inside;
+            }
+
+            /* ===================
+               EDUCATION SECTION
+               =================== */
+            .education-item {
+                @apply mt-4;
+            }
+
+            .education-header {
+                @apply flex flex-row justify-between;
+            }
+
+            .education-degree {
+                @apply text-sm font-mono;
+            }
+
+            .education-description {
+                @apply text-xs font-mono;
+            }
+
+            /* ===================
+               SKILLS SECTION
+               =================== */
+            .skills-container {
+                @apply flex list-none flex-wrap gap-2 p-0 mt-4;
+            }
+
+            .skill-badge {
+                @apply bg-gray-200 px-2 py-1 rounded-md text-xs font-mono font-semibold;
+                @apply print:border print:border-gray-400 print:bg-transparent;
+            }
+
+            /* ===================
+               PROJECTS SECTION
+               =================== */
+            .projects-container {
+                @apply mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 gap-2;
+            }
+
+            .project-item {
+                @apply rounded-lg flex h-full flex-col border p-3;
+            }
+
+            .project-title {
+                @apply font-semibold tracking-tight;
+            }
+
+            .project-description {
+                @apply mt-2 text-pretty font-mono text-xs print:text-[10px];
+            }
+
+            .project-skills {
+                @apply flex list-none flex-wrap gap-2 p-0 mt-auto pt-2;
+            }
+
+            .project-skill-badge {
+                @apply bg-gray-200 px-2 py-1 rounded-md text-[0.7rem] font-mono font-semibold;
+            }
+        }
+
+        @media print {
+            @page {
+                size: auto;
+            }
+        }
+    </style>
+
+</head>
+<body class="cv-container">
+<header class="cv-header">
+    <div class="cv-header-content">
+        <h1 class="cv-name">Frank Hermann</h1>
+        <p class="cv-tagline">Android Engineer passionate about crafting beautiful mobile experiences with clean code and intuitive designs.</p>
+        <address class="contact-info">
+            <div class="contact-info-item">
+                <i class="bx bx-home-alt"></i>
+                <span class="contact-info-item-text">Munich, Germany</span>
+            </div>
+            <div class="contact-info-item">
+                <i class="bx bx-globe-alt"></i>
+                <span class="contact-info-item-text">German, English</span>
+            </div>
+            <div class="social-container">
+                <a href="mailto:hermann.frank@gmail.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social">
+                    <i class='bx bx-envelope'></i>
+                    <span class="social-url">hermann.frank@gmail.com</span>
+                </a>
+
+                <a href="https://linkedin.com/in/befrvnk"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social">
+                    <i class='bxl bx-linkedin'></i>
+                    <span class="social-url">https://linkedin.com/in/befrvnk</span>
+                </a>
+
+                <a href="https://github.com/befrvnk"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social">
+                    <i class='bxl bx-github'></i>
+                    <span class="social-url">https://github.com/befrvnk</span>
+                </a>
+
+                <a href="https://bsky.app/profile/befrvnk.bsky.social"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social">
+                    <i class='bxl bx-bluesky'></i>
+                    <span class="social-url">https://bsky.app/profile/befrvnk.bsky.social</span>
+                </a>
+            </div>
+        </address>
+    </div>
+    <img class="cv-photo" src="me.webp" alt="Frank Hermann" />
+</header>
+
+<main>
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            As an experienced Android Engineer, I bring a passion for crafting mobile experiences using Kotlin and modern Android development practices. My background in fullstack development with Node.js and React provides me with a comprehensive understanding of the web software ecosystem as well.
+            I thrive on exploring emerging technologies and enjoy sharing my knowledge and skills with others.
+        </p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-title">Work Experience</h2>
+
+        <article class="experience-item mt-4">
+            <div class="experience-header">
+                <h3 class="company-name">Freeletics GmbH</h3>
+                <span class="date-range">November 2022 - Present</span>
+            </div>
+            <h4 class="job-title">Senior Android Developer</h4>
+            <div class="job-description">
+                <p class="body-text">Worked on the Freeletics and Stædium app experience, focusing on computer vision features and platform optimization.</p>
+                <ul class="achievement-list">
+                    <li>Developed a multiplatform pose detection system to automatically count exercise repetitions from real-time camera recordings</li>
+                    <li>Extended the pose detection system with qualitative feedback capabilities, providing users with form correction and technique improvement suggestions</li>
+                    <li>Migrated our internal billing library to a simpler API interface</li>
+                    <li>Facilitated company-wide team workout sessions</li>
+                    <li>Organized team-building initiatives including cooking workshops, gaming sessions, and DJ events to foster company culture and collaboration</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="experience-item">
+            <div class="experience-header">
+                <h3 class="company-name">Freeletics GmbH</h3>
+                <span class="date-range">November 2017 - November 2022</span>
+            </div>
+            <h4 class="job-title">Android Developer</h4>
+            <div class="job-description">
+                <p class="body-text">Contributed to core user acquisition and retention features across the Freeletics Android platform, specializing in user onboarding flows, monetization systems, and personalized coaching experiences.</p>
+                <ul class="achievement-list">
+                    <li>Implemented a comprehensive trial experience for new users, significantly improving user conversion rates and reducing onboarding friction</li>
+                    <li>Orchestrated company-wide hackathons to foster innovation and cross-team collaboration, resulting in multiple feature prototypes that were integrated into production</li>
+                    <li>Led organization of team-building events and social activities, strengthening team cohesion and improving workplace culture</li>
+                    <li>Played a key role in the company's transition to full remote work, helping establish new collaboration workflows and maintaining team productivity during the shift</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="experience-item">
+            <div class="experience-header">
+                <h3 class="company-name">Bayerischer Rundfunk</h3>
+                <span class="date-range">September 2015 - October 2017</span>
+            </div>
+            <h4 class="job-title">Developer</h4>
+            <div class="job-description">
+                <p class="body-text">Contributed as an Android and web developer to the successful development of multiple projects.</p>
+                <ul class="achievement-list">
+                    <li>Ankommen App: Contributed to the official refugee integration app for the German government</li>
+                    <li>Bayern3 Website: Enhanced the Bayern 3 website with improved user experience and modern web technologies</li>
+                    <li>Lauf10! App: Contributed to the Android fitness plan app from the concept to production</li>
+                    <li>Bayern2 App: Developed the Bayern 2 radio streaming app using React Native, delivering cross-platform audio experiences for listeners</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="experience-item">
+            <div class="experience-header">
+                <h3 class="company-name">Virality GmbH</h3>
+                <span class="date-range">September 2014 - August 2015</span>
+            </div>
+            <h4 class="job-title">Developer</h4>
+            <div class="job-description">
+                <p class="body-text">Provided web development consulting services to external clients, delivering customized digital solutions and development frameworks.</p>
+                <ul class="achievement-list">
+                    <li>Designed and implemented a standardized web development workflow and toolchain, streamlining project delivery</li>
+                    <li>Developed an interactive company quiz application, incorporating gamification elements to enhance user engagement</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+
+        <article class="education-item">
+            <div class="education-header">
+                <h3 class="company-name">Technische Universität München</h3>
+                <span class="date-range">2014 - 2017</span>
+            </div>
+            <span class="education-degree">Master of Science, Computer Science</span>
+        </article>
+
+        <article class="education-item">
+            <div class="education-header">
+                <h3 class="company-name">Technische Universität München</h3>
+                <span class="date-range">2010 - 2014</span>
+            </div>
+            <span class="education-degree">Bachelor of Science, Computer Science</span>
+        </article>
+
+        <article class="education-item">
+            <div class="education-header">
+                <h3 class="company-name">Werner-Heisenberg-Gymnasium Garching</h3>
+                <span class="date-range">2001 - 2010</span>
+            </div>
+            <span class="education-degree">Abitur</span>
+            <p class="education-description">Honored for computer science skills in the final thesis.</p>
+        </article>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+
+        <ul class="skills-container">
+            <li class="skill-badge">Kotlin</li>
+            <li class="skill-badge">Coroutines</li>
+            <li class="skill-badge">FlowRedux</li>
+            <li class="skill-badge">Khonshu</li>
+            <li class="skill-badge">Java</li>
+            <li class="skill-badge">Gradle</li>
+            <li class="skill-badge">Android</li>
+            <li class="skill-badge">AndroidX</li>
+            <li class="skill-badge">MediaPipe</li>
+            <li class="skill-badge">Dagger</li>
+            <li class="skill-badge">Anvil</li>
+            <li class="skill-badge">Metro</li>
+            <li class="skill-badge">Retrofit</li>
+            <li class="skill-badge">Protobuf</li>
+            <li class="skill-badge">OkHttp</li>
+            <li class="skill-badge">Typescript</li>
+            <li class="skill-badge">Node.js</li>
+            <li class="skill-badge">GraphQL</li>
+            <li class="skill-badge">React</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section print:hidden">
+        <h2 class="section-title">Side Projects</h2>
+
+        <div class="projects-container">
+            <article class="project-item">
+                <h3 class="project-title">
+                    <a href="https://github.com/befrvnk/sidera" target="_blank">Sidera</a>
+                </h3>
+                <p class="project-description">
+                    Monorepo which contains all my side projects with an opinionated project setup.
+                </p>
+                <ul class="project-skills">
+                    <li class="project-skill-badge">Kotlin</li>
+                    <li class="project-skill-badge">Android</li>
+                    <li class="project-skill-badge">Gradle</li>
+                </ul>
+            </article>
+
+            <article class="project-item">
+                <h3 class="project-title">
+                    <a href="https://github.com/befrvnk/sidera/tree/main/gas-charge" target="_blank">Gas-Charge</a>
+                </h3>
+                <p class="project-description">
+                    Work-in-progress Android app to track gas and charging prices across countries.
+                </p>
+                <ul class="project-skills">
+                    <li class="project-skill-badge">Kotlin</li>
+                    <li class="project-skill-badge">Android</li>
+                    <li class="project-skill-badge">Supabase</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
