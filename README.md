@@ -1,10 +1,49 @@
 # My CV
 
-A modern, responsive CV website built with HTML and CSS.
+A modern, responsive CV website built with static HTML and CSS.
 
 ## 🌐 Live Website
 
 Visit my CV at: [https://befrvnk.github.io/cv](https://befrvnk.github.io/cv)
+
+## 🚀 Development
+
+### Requirements
+
+- [Nix](https://nixos.org/)
+- [devenv](https://devenv.sh/)
+- [direnv](https://direnv.net/) is optional, but recommended for automatic shell activation
+
+### Setup
+
+Enter the development shell:
+
+```sh
+devenv shell
+```
+
+If you use direnv, allow the project once:
+
+```sh
+direnv allow
+```
+
+### Commands
+
+```sh
+serve   # Start a local static file server at http://localhost:8000
+check   # Validate HTML and check formatting
+format  # Format HTML, CSS, Markdown, and Nix files
+```
+
+## 📁 Project Structure
+
+```text
+index.html         # Main CV page
+assets/styles.css  # Custom CSS without a build step
+assets/            # Images and product icons
+devenv.nix         # Reproducible development tooling
+```
 
 ## 🛠️ Technologies Used
 
@@ -20,21 +59,7 @@ Visit my CV at: [https://befrvnk.github.io/cv](https://befrvnk.github.io/cv)
 - Print-friendly styling
 - Clean, modern layout
 - Semantic HTML structure
-
-## 🚀 Local Development
-
-1. Clone this repository
-2. Enter the development shell with `devenv shell`
-3. Run `serve` to preview the CV at [http://localhost:8000](http://localhost:8000)
-4. Run `check` before committing changes
-
-Useful commands:
-
-```sh
-serve   # Start a local static file server
-check   # Validate HTML and check formatting
-format  # Format HTML, CSS, Markdown, and Nix files
-```
+- No frontend build step
 
 ## 📄 License
 
