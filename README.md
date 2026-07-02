@@ -1,13 +1,13 @@
 # My CV
 
-A modern, responsive CV website built with HTML, CSS, and Tailwind CSS.
+A modern, responsive CV website built with HTML and CSS.
 
 ## 🌐 Live Website
 Visit my CV at: [https://befrvnk.github.io/cv](https://befrvnk.github.io/cv)
 
 ## 🛠️ Technologies Used
 - HTML5
-- [Tailwind CSS](https://tailwindcss.com)
+- CSS
 - [Boxicons](https://boxicons.com) for icons
 - [Inter](https://rsms.me/inter/) font from Google Fonts
 
