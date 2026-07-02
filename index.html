@@ -180,6 +180,57 @@
                 }
 
                 /* ===================
+               APPS SECTION
+               =================== */
+                .apps-container {
+                    @apply mt-4 grid grid-cols-1 gap-2;
+                }
+
+                .app-item {
+                    @apply relative rounded-lg flex h-full flex-col border p-3 transition hover:bg-gray-50 focus-within:ring-2 focus-within:ring-gray-300;
+                }
+
+                .app-card-link {
+                    @apply absolute inset-0 rounded-lg focus:outline-none;
+                }
+
+                .app-content {
+                    @apply pointer-events-none;
+                }
+
+                .app-header {
+                    @apply flex items-center gap-3;
+                }
+
+                .app-icon {
+                    @apply size-10 rounded-xl;
+                }
+
+                .app-title {
+                    @apply font-semibold tracking-tight;
+                }
+
+                .app-description {
+                    @apply mt-2 text-pretty font-mono text-xs print:text-[10px];
+                }
+
+                .app-footer {
+                    @apply mt-auto pt-2 flex flex-col gap-3 pointer-events-none md:flex-row md:items-center md:justify-between;
+                }
+
+                .app-skills {
+                    @apply flex list-none flex-wrap gap-2 p-0;
+                }
+
+                .app-store-link {
+                    @apply relative z-10 self-start font-mono text-xs font-semibold text-gray-900 hover:underline pointer-events-auto md:self-auto whitespace-nowrap;
+                }
+
+                .app-skill-badge {
+                    @apply bg-gray-200 px-2 py-1 rounded-md text-[0.7rem] font-mono font-semibold;
+                }
+
+                /* ===================
                PROJECTS SECTION
                =================== */
                 .projects-container {
@@ -187,7 +238,7 @@
                 }
 
                 .project-item {
-                    @apply rounded-lg flex h-full flex-col border p-3;
+                    @apply rounded-lg flex h-full flex-col border p-3 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300;
                 }
 
                 .project-title {
@@ -526,18 +577,64 @@
                 </ul>
             </section>
 
+            <section id="apps" class="section">
+                <h2 class="section-title">Apps</h2>
+
+                <div class="apps-container">
+                    <article class="app-item">
+                        <a
+                            class="app-card-link"
+                            href="https://lvma.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Lvma website"
+                        ></a>
+                        <div class="app-content">
+                            <div class="app-header">
+                                <img
+                                    class="app-icon"
+                                    src="assets/lvma-icon.png"
+                                    alt="Lvma app icon"
+                                />
+                                <h3 class="app-title">Lvma</h3>
+                            </div>
+                            <p class="app-description">
+                                Android camera app for photography enthusiasts
+                                that brings the joy of film photography to the
+                                digital world. Built around shareable presets
+                                that apply a distinct look to every photo and
+                                can be previewed live in the viewfinder.
+                            </p>
+                        </div>
+                        <div class="app-footer">
+                            <ul class="app-skills">
+                                <li class="app-skill-badge">Android</li>
+                                <li class="app-skill-badge">Camera</li>
+                                <li class="app-skill-badge">Photography</li>
+                            </ul>
+                            <a
+                                class="app-store-link"
+                                href="https://play.google.com/store/apps/details?id=dev.befrvnk.lvma"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Open beta on Google Play →</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+
             <section id="projects" class="section print:hidden">
                 <h2 class="section-title">GitHub Projects</h2>
 
                 <div class="projects-container">
-                    <article class="project-item">
-                        <h3 class="project-title">
-                            <a
-                                href="https://github.com/befrvnk/sidera"
-                                target="_blank"
-                                >Sidera</a
-                            >
-                        </h3>
+                    <a
+                        class="project-item"
+                        href="https://github.com/befrvnk/sidera"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3 class="project-title">Sidera</h3>
                         <p class="project-description">
                             Monorepo for Android/Kotlin experiments with an
                             opinionated project setup.
@@ -547,16 +644,15 @@
                             <li class="project-skill-badge">Android</li>
                             <li class="project-skill-badge">Gradle</li>
                         </ul>
-                    </article>
+                    </a>
 
-                    <article class="project-item">
-                        <h3 class="project-title">
-                            <a
-                                href="https://github.com/befrvnk/nixos-config"
-                                target="_blank"
-                                >nixos-config</a
-                            >
-                        </h3>
+                    <a
+                        class="project-item"
+                        href="https://github.com/befrvnk/nixos-config"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3 class="project-title">nixos-config</h3>
                         <p class="project-description">
                             Personal NixOS and nix-darwin configuration for
                             Linux and macOS, including reusable modules and
@@ -567,16 +663,15 @@
                             <li class="project-skill-badge">NixOS</li>
                             <li class="project-skill-badge">nix-darwin</li>
                         </ul>
-                    </article>
+                    </a>
 
-                    <article class="project-item">
-                        <h3 class="project-title">
-                            <a
-                                href="https://github.com/befrvnk/devenv-android-sdk"
-                                target="_blank"
-                                >devenv-android-sdk</a
-                            >
-                        </h3>
+                    <a
+                        class="project-item"
+                        href="https://github.com/befrvnk/devenv-android-sdk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3 class="project-title">devenv-android-sdk</h3>
                         <p class="project-description">
                             Reusable devenv module for Android SDKs with pinned
                             SDK metadata and update-checking tooling.
@@ -586,7 +681,7 @@
                             <li class="project-skill-badge">devenv</li>
                             <li class="project-skill-badge">Android SDK</li>
                         </ul>
-                    </article>
+                    </a>
                 </div>
             </section>
         </main>
